@@ -1,0 +1,133 @@
+    1   06/ 11/ 24 23:33:04 lsblk
+    2   06/ 11/ 24 23:33:04 sudo fdisk /dev/sdb
+    3   06/ 11/ 24 23:33:04 sudo fdisk /dev/sdc
+    4   06/ 11/ 24 23:33:04 lsblk
+    5   06/ 11/ 24 23:33:04 man mdadm
+    6   06/ 11/ 24 23:33:04 sudo dnf install mdadm
+    7   06/ 11/ 24 23:33:04 mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1
+    8   06/ 11/ 24 23:33:04 sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1
+    9   06/ 11/ 24 23:33:04 lsblk
+   10   06/ 11/ 24 23:33:04 sudo mdadm --detail
+   11   06/ 11/ 24 23:33:04 sudo mdadm --detail /dev/md0
+   12   06/ 11/ 24 23:33:04 sudo pvs
+   13   06/ 11/ 24 23:33:04 sudo pvcreate /dev/md0
+   14   06/ 11/ 24 23:33:04 sudo pvs
+   15   06/ 11/ 24 23:33:04 sudo vgcreate vg_raid1 /dev/md0
+   16   06/ 11/ 24 23:33:04 sudo vgs
+   17   06/ 11/ 24 23:33:04 lsblk
+   18   06/ 11/ 24 23:33:04 sudo lvcreate -n new_var -L 1.8G vg_raid1
+   19   06/ 11/ 24 23:33:04 sudo lvs
+   20   06/ 11/ 24 23:33:04 ls /dev/mapper/vg_raid1-new_var
+   21   06/ 11/ 24 23:33:04 sudo dnf install cryptsetup -y
+   22   06/ 11/ 24 23:33:04 man cryptsetup
+   23   06/ 11/ 24 23:33:04 sudo cryptsetup luksFormat /dev/vg_raid1/new_var
+   24   06/ 11/ 24 23:33:04 sudo cryptsetup luksOpen /dev/vg_raid1/new_var vg_raid1-new_var_crypt
+   25   06/ 11/ 24 23:33:04 lsblk
+   26   06/ 11/ 24 23:33:04 blkid
+   27   06/ 11/ 24 23:33:04 blkid | grep crypto
+   28   06/ 11/ 24 23:33:04 sudo blkid | grep crypto
+   29   06/ 11/ 24 23:33:04 sudo blkid | grep crypto > /etc/crypttab
+   30   06/ 11/ 24 23:33:04 sudo chmod+wx /etc/crypttab
+   31   06/ 11/ 24 23:33:04 sudo chmod +wx /etc/crypttab
+   32   06/ 11/ 24 23:33:04 sudo blkid | grep crypto > /etc/crypttab
+   33   06/ 11/ 24 23:33:04 ls -l /etc/crypttab
+   34   06/ 11/ 24 23:33:04 sudo su
+   35   06/ 11/ 24 23:33:04 ls
+   36   06/ 11/ 24 23:33:04 who
+   37   06/ 11/ 24 23:33:04 screen -list
+   38   06/ 11/ 24 23:33:04 exit
+   39   06/ 11/ 24 23:33:04 sudo systemctl status mariadb
+   40   06/ 11/ 24 23:33:04 sudo systemctl enable mariadb
+   41   06/ 11/ 24 23:33:04 sudo systemctl start mariadb
+   42   06/ 11/ 24 23:33:04 sudo systemctl status mariadb
+   43   06/ 11/ 24 23:33:05 ip a
+   44   06/ 11/ 24 23:35:36 cat /etc/resolv.conf
+   45   06/ 11/ 24 23:42:03 clear
+   46   06/ 11/ 24 23:42:06 git status
+   47   06/ 11/ 24 23:42:09 clear
+   48   06/ 11/ 24 23:42:10 ls
+   49   06/ 11/ 24 23:42:15 cd cursoGIT
+   50   06/ 11/ 24 23:42:18 git status
+   51   06/ 11/ 24 23:42:22 clear
+   52   06/ 11/ 24 23:42:25 git
+   53   06/ 11/ 24 23:43:12 clear
+   54   06/ 11/ 24 23:43:24 ls
+   55   06/ 11/ 24 23:43:27 cd tp2
+   56   06/ 11/ 24 23:43:30 cd tp1
+   57   06/ 11/ 24 23:43:32 clear
+   58   06/ 11/ 24 23:43:34 git status
+   59   06/ 11/ 24 23:46:09 git commit -m "Agrega el archivo README.md"
+   60   06/ 11/ 24 23:46:51 git status
+   61   06/ 11/ 24 23:51:58 git log
+   62   06/ 11/ 24 23:55:59 sudo nano README.md
+   63   06/ 11/ 24 23:56:30 sudo vi README.md
+   64   07/ 11/ 24 00:03:17 sudo add README.md
+   65   07/ 11/ 24 00:03:25 git add README.md
+   66   07/ 11/ 24 00:03:36 git commit -m "Informe Añadido" README.md
+   67   07/ 11/ 24 00:03:44 git log
+   68   07/ 11/ 24 00:05:13 clear
+   69   07/ 11/ 24 00:05:17 mkdir src
+   70   07/ 11/ 24 00:05:22 cd src
+   71   07/ 11/ 24 00:05:42 touch Criptomoneda.java
+   72   07/ 11/ 24 00:05:46 ls
+   73   07/ 11/ 24 00:05:49 cd ..
+   74   07/ 11/ 24 00:05:50 ls
+   75   07/ 11/ 24 00:05:55 tree
+   76   07/ 11/ 24 00:05:58 clear
+   77   07/ 11/ 24 00:06:04 cd src
+   78   07/ 11/ 24 00:06:34 vi Criptomoneda.java
+   79   07/ 11/ 24 00:10:48 git config --global alias.add-commit 'git add -A && git commit'
+   80   07/ 11/ 24 00:11:12 git add-commit -m “Primera versión del archivo Cyptomonnaie.java”
+   81   07/ 11/ 24 00:11:38 git add
+   82   07/ 11/ 24 00:13:17 git config --global alias.add-commit 'git add -A && git commit -m'
+   83   07/ 11/ 24 00:13:21 git add-commit -m “Primera versión del archivo Cyptomonnaie.java”
+   84   07/ 11/ 24 00:13:48 git add-commit Criptomoneda.java -m “Primera versión del archivo Cyptomonnaie.java”
+   85   07/ 11/ 24 00:14:13 git add Criptomoneda.java
+   86   07/ 11/ 24 00:14:20 git commit -m “Primera versión del archivo Cyptomonnaie.java”
+   87   07/ 11/ 24 00:14:25 git status
+   88   07/ 11/ 24 00:15:01 git commit “Primera versión del archivo Cyptomonnaie.java”
+   89   07/ 11/ 24 00:15:11 git commit -m “Primera versión del archivo Cyptomonnaie.java”
+   90   07/ 11/ 24 00:16:00 ls
+   91   07/ 11/ 24 00:16:58 mv Criptomoneda.java Cryptomoneda.java
+   92   07/ 11/ 24 00:17:04 rm Criptomoneda.java
+   93   07/ 11/ 24 00:17:18 ls
+   94   07/ 11/ 24 00:17:21 clear
+   95   07/ 11/ 24 00:17:36 git add Cryptomoneda.java
+   96   07/ 11/ 24 00:17:52 git commit -m "Primera versión Cryptomoneda.java"
+   97   07/ 11/ 24 00:18:00 git log
+   98   07/ 11/ 24 00:18:37 javac Cryptomoneda.java
+   99   07/ 11/ 24 00:19:23 sudo yum install java
+  100   07/ 11/ 24 00:27:48 sudo yum install java-devel
+  101   07/ 11/ 24 00:29:46 javac Cryptomoneda.java
+  102   07/ 11/ 24 00:30:19 vi Cryptomoneda.java
+  103   07/ 11/ 24 00:30:29 javac Cryptomoneda.java
+  104   07/ 11/ 24 00:30:35 vi Cryptomoneda.java
+  105   07/ 11/ 24 00:30:52 git add Cryptomoneda.java
+  106   07/ 11/ 24 00:31:03 git commit -m
+  107   07/ 11/ 24 00:31:07 git commit
+  108   07/ 11/ 24 00:31:36 git commit -m "Class name changed"
+  109   07/ 11/ 24 00:31:41 javac Cryptomoneda.java
+  110   07/ 11/ 24 00:31:51 vi Cryptomoneda.java
+  111   07/ 11/ 24 00:32:04 git add Cryptomoneda.java
+  112   07/ 11/ 24 00:32:16 git commit -m "Constructor name changed"
+  113   07/ 11/ 24 00:32:19 javac Cryptomoneda.java
+  114   07/ 11/ 24 00:32:24 git status
+  115   07/ 11/ 24 00:32:41 vi .gitignore
+  116   07/ 11/ 24 00:33:10 git status
+  117   07/ 11/ 24 00:33:23 git add .gitignore
+  118   07/ 11/ 24 00:33:40 git commit -m "Añadir .gitignore"
+  119   07/ 11/ 24 00:33:44 git status
+  120   07/ 11/ 24 00:35:10 history > history-P2-L2.txt
+  121   07/ 11/ 24 00:35:24 ls
+  122   07/ 11/ 24 00:35:27 rm history-P2-L2.txt 
+  123   07/ 11/ 24 00:35:31 cd ..
+  124   07/ 11/ 24 00:35:39 history > history-P2-L2.txt
+  125   07/ 11/ 24 00:35:47 git add history-P2-L2.txt 
+  126   07/ 11/ 24 00:35:59 ls
+  127   07/ 11/ 24 00:36:43 git clone https://github.com/LuciaLlavero/bitacoras-ISE-24-25
+  128   07/ 11/ 24 00:36:53 ls
+  129   07/ 11/ 24 00:36:59 cd bitacoras-ISE-24-25/
+  130   07/ 11/ 24 00:37:05 cd ..
+  131   07/ 11/ 24 00:37:07 rm history-P2-L2.txt 
+  132   07/ 11/ 24 00:37:10 cd bitacoras-ISE-24-25/
+  133   07/ 11/ 24 00:37:19 history > history-P2-L2.txt
