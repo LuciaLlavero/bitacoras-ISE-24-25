@@ -1,0 +1,82 @@
+    1   13/ 11/ 24 09:29:24 sudo apt install mysql-server
+    2   13/ 11/ 24 09:33:23 mysql
+    3   13/ 11/ 24 09:33:36 sudo mysql
+    4   13/ 11/ 24 09:35:49 sudo /etc/init.d/mysql stop
+    5   13/ 11/ 24 09:36:01 sudo /etc/init.d/mysqld stop
+    6   13/ 11/ 24 09:36:40 sudo mysqld_safe --skip-grant-tables &
+    7   13/ 11/ 24 09:37:12 mysql -u root
+    8   13/ 11/ 24 09:37:38 use mysql
+    9   13/ 11/ 24 09:38:00 sudo /etc/init.d/mysql start
+   10   13/ 11/ 24 09:38:41 sudo mysql
+   11   13/ 11/ 24 09:40:45 sudo mysql_secure_installation
+   12   13/ 11/ 24 09:41:38 sudo /etc/init.d/mysqld start
+   13   13/ 11/ 24 09:42:34 sudo systemctl status mysql
+   14   13/ 11/ 24 09:42:58 sudo systemctl enable mysql
+   15   13/ 11/ 24 09:43:27 sudo cat /etc/mysql/my.cnf | grep socket
+   16   13/ 11/ 24 09:43:35 sudo cat /etc/mysql/my.cnf
+   17   13/ 11/ 24 09:44:30 sudo cat /etc/mysql/mysql.cnf.d | grep socket
+   18*  13/ 11/ 24 09:44:42 
+   19   13/ 11/ 24 09:45:45 sudo vi /etc/mysql/my.cnf
+   20   13/ 11/ 24 09:46:04 sudo mysql_secure_installation
+   21   13/ 11/ 24 09:46:14 sudo vi /etc/mysql/my.cnf
+   22   13/ 11/ 24 09:47:29 sudo mysql_secure_installation
+   23   13/ 11/ 24 09:49:28 sudo find / -type s
+   24   13/ 11/ 24 09:50:57 cd /var/lib/mysql
+   25   13/ 11/ 24 09:51:11 sudo cd /var/lib/mysql
+   26   13/ 11/ 24 09:51:20 cd /var/lib
+   27   13/ 11/ 24 09:51:21 ls
+   28   13/ 11/ 24 09:51:48 cd mysql
+   29   13/ 11/ 24 09:51:57 cd
+   30   13/ 11/ 24 09:52:55 sudo chmod 777 /var/run/mysqld/mysqld.sock
+   31   13/ 11/ 24 09:53:20 sudo chmod 777 /var/lib/mysqld/mysqld.sock
+   32   13/ 11/ 24 09:53:30 sudo chmod 777 /var/run/mysql/mysqld.sock
+   33   13/ 11/ 24 09:53:33 sudo chmod 777 /var/run/mysql/mysql.sock
+   34   13/ 11/ 24 09:53:40 sudo chmod 777 /var/lib/mysql/mysql.sock
+   35   13/ 11/ 24 09:54:08 ps -A | grep mysql
+   36   13/ 11/ 24 09:55:49 sudo pkill mysql
+   37   13/ 11/ 24 09:55:52 ps -A | grep mysql
+   38   13/ 11/ 24 09:56:06 sudo pkill mysql
+   39   13/ 11/ 24 09:56:20 sudo service mysql restart
+   40*  13/ 11/ 24 09:56:40 
+   41   13/ 11/ 24 10:11:59 sudo mysql_secure_installation
+   42   13/ 11/ 24 10:12:26 sudo mysql
+   43   13/ 11/ 24 10:12:54 sudo mysql_secure_installation
+   44   13/ 11/ 24 10:13:39 sudo mysql -u root
+   45   13/ 11/ 24 10:14:16 mysqladmin -u root password 'practicas,ise'
+   46   13/ 11/ 24 10:14:30 sudo mysql -u root -p
+   47   13/ 11/ 24 10:37:40 sudo apt install php libapache2-mod-php php-mysql
+   48   13/ 11/ 24 10:39:43 php -v
+   49   13/ 11/ 24 10:43:47 sudo vi /atc/apache2/mods-enabled/dir.conf
+   50   13/ 11/ 24 10:44:01 sudo vi /etc/apache2/mods-enabled/dir.conf
+   51   13/ 11/ 24 10:45:03 sudo systemctl restart apache2
+   52   13/ 11/ 24 10:45:18 sudo systemctl status apache2
+   53   13/ 11/ 24 11:33:35 sudo mkdir /var/www/ise
+   54   13/ 11/ 24 11:36:32 sudo chmod -R $USER:$USER /var/www/ise
+   55   13/ 11/ 24 11:36:41 sudo chown -R $USER:$USER /var/www/ise
+   56   13/ 11/ 24 11:37:32 sudo vi /etc/apache2/sites-available/ise.conf
+   57   13/ 11/ 24 11:40:10 sudo a2ensite ise
+   58   13/ 11/ 24 11:40:23 sudo systemctl reload apache2
+   59   13/ 11/ 24 11:40:28 sudo a2ensite ise
+   60   13/ 11/ 24 11:53:57 sudo a2dissite 000-default
+   61   13/ 11/ 24 11:54:16 sudo systemctl reload apache2
+   62   13/ 11/ 24 12:04:01 sudo apache2ctl configtest
+   63   13/ 11/ 24 12:12:36 sudo vi /var/www/ise/index.html
+   64   13/ 11/ 24 12:14:39 sudo systemctl reload apache2
+   65   13/ 11/ 24 13:26:00 sudo vi /var/www/ise/index.html
+   66   13/ 11/ 24 13:26:16 sudo systemctl reload apache2
+   67   13/ 11/ 24 13:40:33 sudo vi /var/www/ise/info.php
+   68   13/ 11/ 24 13:45:10 sudo rm /var/www/ise/info.php
+   69   13/ 11/ 24 13:51:05 sudo mysql
+   70   13/ 11/ 24 13:51:16 sudo mysql -u root
+   71   13/ 11/ 24 13:51:19 sudo mysql -u root -p
+   72   13/ 11/ 24 14:00:37 sudo mysql -u iseDBadmin -p
+   73   13/ 11/ 24 14:00:55 mysql -u iseDBadmin -p
+   74   13/ 11/ 24 14:01:39 sudo mysql -u root -p
+   75   13/ 11/ 24 14:13:53 sudo vi /var/www/ise/todoList.php
+   76   13/ 11/ 24 14:46:46 git -version
+   77   13/ 11/ 24 14:46:51 git --version
+   78   13/ 11/ 24 14:47:10 git clone https://github.com/LuciaLlavero/bitacoras-ISE-24-25
+   79   13/ 11/ 24 14:47:28 cd bitacoras-ISE-24-25/
+   80   13/ 11/ 24 14:47:42 export PS1="[ \u@\h:\w ] \D{ %F} \t $ "
+   81   13/ 11/ 24 14:47:55 export HISTTIMEFORMAT=" %d/ %m/ %y %T "
+   82   13/ 11/ 24 14:49:07 history > history-P3-LAMP-Ubuntu.txt
