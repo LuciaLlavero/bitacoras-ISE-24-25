@@ -1,0 +1,127 @@
+    1  sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDB173wMhZVfV4voTX2qHqNyKaEnyEcWvFDOgJIP560DGGZnuDv/HX1RPoRCGqK8KbHxuZYwBhdGh9z978SPssPcI45pZj5f304EJ4RUxrI2GctJR0bTEro4nKc7Tgn2V7RsN5UQBu8oi12MulNfMVzz93do0FsurqbdSCNAev3Gk9ug8WDoHK+wDSoR7bxYBWpzWjPVpjhESPnY39NuaEVz3kyI7XhdDxZGl0WRbjaNHYtZzCiP9Tyn11ZgIN9sK14UqN+60IJUd4yZGFIAHMBzrxuiDYd6NXJ4h5o/WDsA8tlk6qmrWaofykfRQeU/IVV4NylyTzifr6pAPR2BzP/5GPFxMYflrQdag3rhH8o/qxkQasv6jGjsqxYa593tC0gYxecR9zV2Cdb8H5d5jqtOosiwgRs5UyiBYJh+mbiX2WPEdkAIjDrOxzFUiucZnBwderURKJ7G3056r7O9ybtAm6CxJV+kObSLiidXqgZjfmjZAOCpLPbPinHRXgRgik= lucia@DESKTOP-D3LMRC3" >> ~/.ssh/authorized_keys
+    2  wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest+focal_all.deb
+    3  sudo dpkg -i zabbix-release_latest+focal_all.deb
+    4  lsof /var/lib/dpkg/lock
+    5  dpkg -i zabbix-release_latest+focal_all.deb
+    6  sudo dpkg -i zabbix-release_latest+focal_all.deb
+    7  ps aux | grep -i apt
+    8  sudo kill 532
+    9  sudo kill 24395
+   10  sudo kill 24399
+   11  sudo dpkg -i zabbix-release_latest+focal_all.deb
+   12  ps aux | grep -i apt
+   13  sudo killall apt apt-get
+   14  sudo kill 25213
+   15  ps aux | grep -i apt
+   16  sudo kill 25217
+   17  ps aux | grep -i apt
+   18  sudo dpkg -i zabbix-release_latest+focal_all.deb
+   19  sudo kill 25420
+   20  ps aux | grep -i apt
+   21  sudo kill 26814
+   22  ps aux | grep -i apt
+   23  clear
+   24  sudo reboot
+   25  sudo systemctl status sshd
+   26  sudo apt-get remove --purge openssh-server
+   27  sudo apt-get install openssh-server
+   28  sudo systemctl status sshd
+   29  sudo systemctl start sshd
+   30  sudo systemctl enable sshd
+   31  vi /etc/ssh/sshd_config
+   32  sudo vi /etc/ssh/sshd_config
+   33  sudo systemctl restart sshd
+   34  ufw status
+   35  sudo ufw status
+   36  ufw status
+   37  sudo ufw status
+   38  sudo ufw enable
+   39  sudo ufw allow 22022
+   40  history
+   41  ssh-copy-id lucialc@192.168.56.105
+   42  clear
+   43  mkdir --help
+   44  sudo vi /etc/ssh/sshd_config
+   45  sudo systemctl restart ssh
+   46  sudo vi /etc/ssh/sshd_config
+   47  sudo systemctl restart ssh
+   48  sudo cat ~/.ssh/authorized_keys
+   49  sudo vi /etc/ssh/sshd_config
+   50  sudo systemctl restart ssh
+   51  zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
+   52  mysql -u root -p
+   53  sudo systemctl restart zabbix-server zabbix-agent apache2
+   54  tail /var/log/zabbix/zabbix_server.log
+   55  mysql -u root -p
+   56  cd zabbix/mysql
+   57  clear
+   58  tail /var/log/zabbix/zabbix_server.log
+   59  cd /etc/zabbix
+   60  ls
+   61  mysql -uzabbix -p zabbix < schema.sql
+   62  cd zabbix_agent.d
+   63  cd zabbix_agentd.d
+   64  ls
+   65  cd ..
+   66  cd web
+   67  ls
+   68  cd ..
+   69  zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
+   70  cd /usr/share/doc/zabbix-server-mysql
+   71  ls
+   72  cd
+   73  zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
+   74  systemctl restart zabbix-server zabbix-agent apache2
+   75  sudo systemctl restart zabbix-server zabbix-agent apache2
+   76  tail /var/log/zabbix/zabbix_server.log
+   77  mysql -uzabbix -p zabbix
+   78  sudo nano /etc/dpkg/dpkg.cfg.d/excludes
+   79  cd /etc/dpkg
+   80  ls
+   81  cd dpkg.cfg
+   82  cd dpkg.cfg.d
+   83  ls
+   84  cat excludes
+   85  rm excludes
+   86  ls
+   87  rm excludes
+   88  sudo rm excludes
+   89  ls
+   90  cd
+   91  clear
+   92  zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
+   93  sudo systemctl restart zabbix-server zabbix-agent apache2
+   94  tail /var/log/zabbix/zabbix_server.log
+   95  sudo nano /etc/dpkg/dpkg.cfg
+   96  cd /etc/dpkg
+   97  ls
+   98  cd origins
+   99  ls
+  100  cd ubuntu
+  101  clear
+  102  sudo systemctl restart zabbix-server zabbix-agent apache2
+  103  tail /var/log/zabbix/zabbix_server.log
+  104  cat /etc/zabbix/zabbix_server.conf
+  105  cd
+  106  sudo cat /etc/zabbix/zabbix_server.conf
+  107  clear
+  108  mysql -u root -p
+  109  sudo adduser zabbix
+  110  sudo zabbix
+  111  su -zabbix
+  112  su zabbix
+  113  su - zabbix
+  114  sudo deluser zabbix
+  115  sudo adduser zabbix
+  116  sudo deluser --remove-home zabbix
+  117  sudo visudo
+  118  sudo adduser zabbix
+  119  mysql -u root -p
+  120  sudo adduser zabbix
+  121  sudo deluser --remove-home zabbix
+  122  ps -aux | grep zabbix
+  123  sudo systemctl status zabbix-server zabbix-agent apache2
+  124  ls
+  125  history > historyP2-zabbixServer.txt
+  126  cd 
+  127  history > historyP2-zabbixServer.txt
