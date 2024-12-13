@@ -1,0 +1,455 @@
+    1  sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDB173wMhZVfV4voTX2qHqNyKaEnyEcWvFDOgJIP560DGGZnuDv/HX1RPoRCGqK8KbHxuZYwBhdGh9z978SPssPcI45pZj5f304EJ4RUxrI2GctJR0bTEro4nKc7Tgn2V7RsN5UQBu8oi12MulNfMVzz93do0FsurqbdSCNAev3Gk9ug8WDoHK+wDSoR7bxYBWpzWjPVpjhESPnY39NuaEVz3kyI7XhdDxZGl0WRbjaNHYtZzCiP9Tyn11ZgIN9sK14UqN+60IJUd4yZGFIAHMBzrxuiDYd6NXJ4h5o/WDsA8tlk6qmrWaofykfRQeU/IVV4NylyTzifr6pAPR2BzP/5GPFxMYflrQdag3rhH8o/qxkQasv6jGjsqxYa593tC0gYxecR9zV2Cdb8H5d5jqtOosiwgRs5UyiBYJh+mbiX2WPEdkAIjDrOxzFUiucZnBwderURKJ7G3056r7O9ybtAm6CxJV+kObSLiidXqgZjfmjZAOCpLPbPinHRXgRgik= lucia@DESKTOP-D3LMRC3" >> ~/.ssh/authorized_keys
+    2  wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest+focal_all.deb
+    3  sudo dpkg -i zabbix-release_latest+focal_all.deb
+    4  lsof /var/lib/dpkg/lock
+    5  dpkg -i zabbix-release_latest+focal_all.deb
+    6  sudo dpkg -i zabbix-release_latest+focal_all.deb
+    7  ps aux | grep -i apt
+    8  sudo kill 532
+    9  sudo kill 24395
+   10  sudo kill 24399
+   11  sudo dpkg -i zabbix-release_latest+focal_all.deb
+   12  ps aux | grep -i apt
+   13  sudo killall apt apt-get
+   14  sudo kill 25213
+   15  ps aux | grep -i apt
+   16  sudo kill 25217
+   17  ps aux | grep -i apt
+   18  sudo dpkg -i zabbix-release_latest+focal_all.deb
+   19  sudo kill 25420
+   20  ps aux | grep -i apt
+   21  sudo kill 26814
+   22  ps aux | grep -i apt
+   23  clear
+   24  sudo reboot
+   25  sudo systemctl status sshd
+   26  sudo apt-get remove --purge openssh-server
+   27  sudo apt-get install openssh-server
+   28  sudo systemctl status sshd
+   29  sudo systemctl start sshd
+   30  sudo systemctl enable sshd
+   31  vi /etc/ssh/sshd_config
+   32  sudo vi /etc/ssh/sshd_config
+   33  sudo systemctl restart sshd
+   34  ufw status
+   35  sudo ufw status
+   36  ufw status
+   37  sudo ufw status
+   38  sudo ufw enable
+   39  sudo ufw allow 22022
+   40  history
+   41  ssh-copy-id lucialc@192.168.56.105
+   42  clear
+   43  mkdir --help
+   44  sudo vi /etc/ssh/sshd_config
+   45  sudo systemctl restart ssh
+   46  sudo vi /etc/ssh/sshd_config
+   47  sudo systemctl restart ssh
+   48  sudo cat ~/.ssh/authorized_keys
+   49  sudo vi /etc/ssh/sshd_config
+   50  sudo systemctl restart ssh
+   51  zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
+   52  mysql -u root -p
+   53  sudo systemctl restart zabbix-server zabbix-agent apache2
+   54  tail /var/log/zabbix/zabbix_server.log
+   55  mysql -u root -p
+   56  cd zabbix/mysql
+   57  clear
+   58  tail /var/log/zabbix/zabbix_server.log
+   59  cd /etc/zabbix
+   60  ls
+   61  mysql -uzabbix -p zabbix < schema.sql
+   62  cd zabbix_agent.d
+   63  cd zabbix_agentd.d
+   64  ls
+   65  cd ..
+   66  cd web
+   67  ls
+   68  cd ..
+   69  zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
+   70  cd /usr/share/doc/zabbix-server-mysql
+   71  ls
+   72  cd
+   73  zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
+   74  systemctl restart zabbix-server zabbix-agent apache2
+   75  sudo systemctl restart zabbix-server zabbix-agent apache2
+   76  tail /var/log/zabbix/zabbix_server.log
+   77  mysql -uzabbix -p zabbix
+   78  sudo nano /etc/dpkg/dpkg.cfg.d/excludes
+   79  cd /etc/dpkg
+   80  ls
+   81  cd dpkg.cfg
+   82  cd dpkg.cfg.d
+   83  ls
+   84  cat excludes
+   85  rm excludes
+   86  ls
+   87  rm excludes
+   88  sudo rm excludes
+   89  ls
+   90  cd
+   91  clear
+   92  zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
+   93  sudo systemctl restart zabbix-server zabbix-agent apache2
+   94  tail /var/log/zabbix/zabbix_server.log
+   95  sudo nano /etc/dpkg/dpkg.cfg
+   96  cd /etc/dpkg
+   97  ls
+   98  cd origins
+   99  ls
+  100  cd ubuntu
+  101  clear
+  102  sudo systemctl restart zabbix-server zabbix-agent apache2
+  103  tail /var/log/zabbix/zabbix_server.log
+  104  cat /etc/zabbix/zabbix_server.conf
+  105  cd
+  106  sudo cat /etc/zabbix/zabbix_server.conf
+  107  clear
+  108  mysql -u root -p
+  109  sudo adduser zabbix
+  110  sudo zabbix
+  111  su -zabbix
+  112  su zabbix
+  113  su - zabbix
+  114  sudo deluser zabbix
+  115  sudo adduser zabbix
+  116  sudo deluser --remove-home zabbix
+  117  sudo visudo
+  118  sudo adduser zabbix
+  119  mysql -u root -p
+  120  sudo adduser zabbix
+  121  sudo deluser --remove-home zabbix
+  122  ps -aux | grep zabbix
+  123  sudo systemctl status zabbix-server zabbix-agent apache2
+  124  clear
+  125  mysql -u root -p
+  126  su zabbix
+  127  sudo userdel -r zabbix
+  128  sudo kill 3015
+  129  sudo userdel -r zabbix
+  130  sudo kill 3896
+  131  sudo userdel -r zabbix
+  132  su zabbix
+  133  sudo adduser zabbix
+  134  cat /etc/passwd
+  135  cat /etc/passwd | grep 'zabbix'
+  136  clear
+  137  su zabbix
+  138  ls
+  139  history > historyP2-zabbixServer.txt
+  140  cd 
+  141  history > historyP2-zabbixServer.txt
+  142  ls
+  143  cat historyP2-zabbixServer.txt 
+  144  ls
+  145  mv historyP2-zabbixServer.txt ./bitacoras-ISE-24-25/
+  146  cd bitacoras-ISE-24-25/
+  147  ls
+  148  git add historyP2-zabbixServer.txt
+  149  git commit -m "zabbix server config"
+  150  git push
+  151  cd
+  152  sudo adduser zabbix sudo
+  153  su zabbix
+  154  sudo uaserdel -r zabbix
+  155  userdel -r zabbix
+  156  sudo userdel -r zabbix
+  157  sudo useradd -m -d /home/testuser/ -s /bin/bash -G sudo testuser
+  158  su zabbix
+  159  sudo vi /etc/zabbix/zabbix_server.conf
+  160  sudo systemctl restart zabbix-server zabbix-agent apache2
+  161  systemctl status zabbix-agent.service
+  162  sudo vi /etc/zabbix/apache.conf
+  163  clear
+  164  sudo journalctl -u zabbix-agent -xe
+  165  sudo nano /etc/zabbix/zabbix_agentd.conf
+  166  cd /run/zabbix
+  167  ls
+  168  cd ..
+  169  ls
+  170  sudo chown zabbix::zabbix /run/zabbix
+  171  sudo chown 1001::1001 /run/zabbix
+  172  sudo chown zabbix:zabbix /run/zabbix
+  173  cd
+  174  sudo chown zabbix:zabbix /run/zabbix
+  175  sudo chown 755 /run/zabbix
+  176  grep "^LogFile" /etc/zabbix/zabbix_agentd.conf
+  177  ls -ld /var/log/zabbix
+  178  sudo touch /run/zabbix/zabbix_agentd.pid
+  179  sudo chown zabbix:zabbix /run/zabbix/zabbix_agentd.pid
+  180  sudo systemctl restart zabbix-server zabbix-agent apache2
+  181  sudo chmod 755 /var/log/zabbix
+  182  sudo zabbix_agentd -t -c /etc/zabbix/zabbix_agentd.conf
+  183  sudo systemctl daemon-reload
+  184  sudo systemctl restart zabbix-agent
+  185  sudo systemctl status zabbix-agent
+  186  sudo journalctl -u zabbix-agent -xe
+  187  sudo apt purge zabbix-agent
+  188  sudo apt install zabbix-agent
+  189  sudo systemctl restart zabbix-agent
+  190  systemctl enable zabbix-server zabbix-agent apache2
+  191  su zabbix
+  192  clear
+  193  mysql -u root -p
+  194  sudo systemmctl status zabbix-server
+  195  sudo systemctl status zabbix-server
+  196  sudo systemctl status zabbix-agent
+  197  sudo systemctl status apache2
+  198  clear
+  199  cat /etc/zabbix/zabbix_agentd.conf
+  200  cat /etc/zabbix/zabbix_agentd.conf | grep Hostname
+  201  cat /etc/zabbix/zabbix_agentd.conf | grep user
+  202  cat /etc/zabbix/zabbix_agentd.conf | grep User
+  203  sudo vi /etc/apache2/apache2.conf
+  204  sudo systemctl restart apache2
+  205  sudo apache2ctl configtest
+  206  hostname -f
+  207  sudo vi /etc/apache2/apache2.conf
+  208  sudo systemctl restart apache2
+  209  sudo apache2ctl configtest
+  210  sudo vi /etc/apache2/sites-available/000-default.conf
+  211  sudo systemctl restart apache2
+  212  clear
+  213  mysql -u root -p
+  214  sudo tail -f /var/log/zabbix/zabbix_server.log
+  215  cat /etc/zabbix/zabbix_server.conf | grep DBUser
+  216  sudo cat /etc/zabbix/zabbix_server.conf | grep DBUser
+  217  sudo cat /etc/zabbix/zabbix_server.conf | grep DB
+  218  cat /etc/apache2/httpd.conf
+  219  clear
+  220  sudo cat /etc/apache2/sites-available/000-default.conf
+  221  sudo vi /var/www/html
+  222  sudo vi /var/www/html/info.php
+  223  sudo systemctl restart apache2
+  224  sudo vi /var/www/html/info.php
+  225  sudo systemctl restart apache2
+  226  sudo vi /var/www/html/info.php
+  227  mysql -u root -p
+  228  sudo vi /var/www/html
+  229  sudo chmod 644 /var/www/html/info.php
+  230  sudo chown www-data:www-data /var/www/html/info.php
+  231  sudo a2enmod php
+  232  php -v
+  233  sudo apt install libapache2-mod-php7.4.3
+  234  sudo apt install libapache2-mod-php7.4
+  235  sudo a2enmod php
+  236  sudo systemctl restart apache2
+  237  sudo tail -f /var/log/apache2/error.log
+  238  sudo vi /var/www/ise/info.php
+  239  sudo systemctl restart apache2
+  240  cd /var/www/ise
+  241  ls
+  242  sudo cat /etc/apache2/apache2.conf
+  243  cd
+  244  sudo cat /etc/apache2/sites-available/000-default.conf
+  245  sudo cat /etc/apache2/sites-available/ise.conf
+  246  sudo cat /etc/apache2/sites-available/zabbix.conf
+  247  sudo cat /etc/apache2/sites-available/ubuntuserver.conf
+  248  sudo vi /etc/apache2/mods-available/dir.conf
+  249  $ pipx install --include-deps ansible
+  250  python3 -m pip install --user pipx
+  251  sudo apt-get install python3-pip
+  252  python3 -m pip install --user pipx
+  253  python3 -m pipx ensurepath
+  254  sudo pipx ensurepath --global # optional to allow pipx actions with --global argument
+  255  sudo apt install software-properties-common
+  256  sudo add-apt-repository --yes --update ppa:ansible/ansible
+  257  sudo apt install ansible
+  258  wget http://phoronix-test
+  259  suite.com/releases/repo/pts.debian/files/phoroni
+  260  wget http://phoronix-testsuite.com/releases/repo/pts.debian/files/phoronix-test-suite_8.6.0_all.deb
+  261  wget http://phoronix-test-suite.com/releases/repo/pts.debian/files/phoronix-test-suite_8.6.0_all.deb
+  262  udo dpkg -i phoronix-test-suite_8.6.0_all.deb
+  263  sudo dpkg -i phoronix-test-suite_8.6.0_all.deb
+  264  phoronix-test-suite list-available-tests
+  265  sudo apt install unzip
+  266  phoronix-test-suite benchmark smallpt
+  267  clear
+  268  sudo apt install docker.io
+  269  sudo systemctl start docker
+  270  docker pull phoronix/pts
+  271  sudo docker pull phoronix/pts
+  272  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+  273  sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
+  274  sudo rm -rf /var/lib/docker
+  275  sudo rm -rf /var/lib/containerd
+  276  sudo rm /etc/apt/sources.list.d/docker.list
+  277  sudo rm /etc/apt/keyrings/docker.asc
+  278  clear
+  279  sudo apt-get install ca-certificates curl
+  280  sudo install -m 0755 -d /etc/apt/keyrings
+  281  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  282  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  283  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  284  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  285  sudo docker run hello-world
+  286  sudo apt install gnome-terminal
+  287  sudo apt-get install ./docker-desktop-amd64.deb
+  288  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  289  sudo docker run hello-world
+  290  clear
+  291  sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+  292  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  293  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  294  sudo apt install -y docker-ce docker-ce-cli containerd.io
+  295  sudo apt update
+  296  apt-cache policy docker-ce
+  297  sudo apt install -y docker-ce docker-ce-cli containerd.io
+  298  git clone https://github.com/davidPalomar-ugr/iseP4JMeter.git
+  299  df
+  300  ls
+  301  lsblk
+  302  ls
+  303  du -h
+  304  du -h -d
+  305  du -h .
+  306  ls
+  307  du -h zabbix-release_latest+focal_all.deb
+  308  rm zabbix-release_*
+  309  ls
+  310  du -h bitacoras-ISE-24-25/
+  311  ls
+  312  rm phoronix-test-suite_8.6.0_all.deb 
+  313  ls -a
+  314  ls
+  315  du -h *
+  316  df
+  317  df -h
+  318  cd ..
+  319  ls
+  320  man du
+  321  du -h -d 1
+  322  cd
+  323  ls
+  324  du -h -d 1
+  325  cd .local/
+  326  ls
+  327  cd bin/
+  328  ls
+  329  cd
+  330  which ansible
+  331  sudo apt remove ansible
+  332  which ansible
+  333  sudo pip uninstall --yes ansible
+  334  ansible --version
+  335  apt remove ansible && apt purge ansible && apt autoremove
+  336  sudo apt purge ansible && apt autoremove
+  337  sudo pip unsintall ansibñe
+  338  sudo pip unsintall ansible
+  339  which ansible
+  340  cd
+  341  ls
+  342  git clone https://github.com/davidPalomar-ugr/iseP4JMeter.git
+  343  cd .
+  344  cd ..
+  345  ls
+  346  cd
+  347  cd ./.local/bin
+  348  ks
+  349  ls
+  350  cd
+  351  du -h -d 1
+  352  cd ./.local/bin
+  353  ls
+  354  rm ansible*
+  355  ls
+  356  cd
+  357  du -h -d 1
+  358  cd ./.local/bin
+  359  sudo apt remove ansible && apt purge ansible && apt autoremove
+  360  pip uninstall ansible
+  361  cd
+  362  du -h -d 1
+  363  git clone https://github.com/davidPalomar-ugr/iseP4JMeter.git
+  364  rm -rf iseP2JMeter
+  365  git clone git@github.com:davidPalomar-ugr/iseP4JMeter.git
+  366  git config --global http.version HTTP/1.1
+  367  git clone https://github.com/davidPalomar-ugr/iseP4JMeter.git
+  368  sudo apt-get install docker-ce --only-upgrade
+  369  sudo apt update
+  370  sudo apt upgrade docker-ce
+  371  docker --version
+  372  docker-compose --version
+  373  docker-compose up
+  374  cd iseP4JMeter/
+  375  docker-compose up
+  376  docker-compose verion
+  377  docker-compose version
+  378  docker version
+  379  nano docker-compose.yml
+  380  docker-compose up
+  381  cd iseP4JMeter/
+  382  node -v
+  383  cd
+  384  node -v
+  385  sudo at install nodejs
+  386  sudo apt install nodejs
+  387  node -v
+  388  nvm install 18
+  389  npm install
+  390  sudo apt install npm
+  391  cd iseP4JMeter/
+  392  docker-compose up
+  393  nvm -v
+  394  cd
+  395  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  396  sudo apt-get install nodejs -y
+  397  node -v
+  398  cd iseP4JMeter/
+  399  docker-compose up
+  400  node -v
+  401  cd
+  402  npm install
+  403  npm cache clean --force
+  404  npm install
+  405  npm init -y
+  406  npm install
+  407  /home/lucialc/.npm/_logs/2024-12-11T10_44_24_380Z-debug-0.log
+  408  sudo /home/lucialc/.npm/_logs/2024-12-11T10_44_24_380Z-debug-0.log
+  409  npm -v
+  410  cd iseP4JMeter/
+  411  docker-compose up
+  412  npm -v
+  413  node -v
+  414  npm cache clean --force
+  415  cd
+  416  npm cache clean --force
+  417  rm -rf node_modules package-lock.json
+  418  npm -v
+  419  npm start
+  420  cat package.json
+  421  nano package.json
+  422  npm start
+  423  npm run
+  424  nano package.json
+  425  npm start
+  426  cd iseP4JMeter/
+  427  ls
+  428  cd node.js
+  429  ls -la
+  430  cd nodjs
+  431  cd nodejs
+  432  ls
+  433  cd
+  434  nano package.json
+  435  npm start
+  436  npm install
+  437  npm install http-errors
+  438  nano package.json
+  439  npm start
+  440  cd iseP4JMeter/
+  441  docker compose up
+  442  cd iseP4JMeter/
+  443  docker-compose up
+  444  docker-compose up -d
+  445  sh pruebaEntorno.sh
+  446  sudo docker-compose up -d
+  447  sh pruebaEntorno.sh
+  448  curl -v http://localhost:3000
+  449  node app.js
+  450  docker-compose restart
+  451  sh pruebaEntorno.sh
+  452  docker ps
+  453  cd
+  454  cd bitacoras-ISE-24-25/
+  455  history > history-P4-docker.txt
