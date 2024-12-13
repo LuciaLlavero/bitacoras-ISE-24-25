@@ -1,0 +1,250 @@
+    1   01/ 12/ 24 11:19:49 lsblk
+    2   01/ 12/ 24 11:19:49 sudo fdisk /dev/sdb
+    3   01/ 12/ 24 11:19:49 sudo fdisk /dev/sdc
+    4   01/ 12/ 24 11:19:49 lsblk
+    5   01/ 12/ 24 11:19:49 man mdadm
+    6   01/ 12/ 24 11:19:49 sudo dnf install mdadm
+    7   01/ 12/ 24 11:19:49 mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1
+    8   01/ 12/ 24 11:19:49 sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1
+    9   01/ 12/ 24 11:19:49 lsblk
+   10   01/ 12/ 24 11:19:49 sudo mdadm --detail
+   11   01/ 12/ 24 11:19:49 sudo mdadm --detail /dev/md0
+   12   01/ 12/ 24 11:19:49 sudo pvs
+   13   01/ 12/ 24 11:19:49 sudo pvcreate /dev/md0
+   14   01/ 12/ 24 11:19:49 sudo pvs
+   15   01/ 12/ 24 11:19:49 sudo vgcreate vg_raid1 /dev/md0
+   16   01/ 12/ 24 11:19:49 sudo vgs
+   17   01/ 12/ 24 11:19:49 lsblk
+   18   01/ 12/ 24 11:19:49 sudo lvcreate -n new_var -L 1.8G vg_raid1
+   19   01/ 12/ 24 11:19:49 sudo lvs
+   20   01/ 12/ 24 11:19:49 ls /dev/mapper/vg_raid1-new_var
+   21   01/ 12/ 24 11:19:49 sudo dnf install cryptsetup -y
+   22   01/ 12/ 24 11:19:49 man cryptsetup
+   23   01/ 12/ 24 11:19:49 sudo cryptsetup luksFormat /dev/vg_raid1/new_var
+   24   01/ 12/ 24 11:19:49 sudo cryptsetup luksOpen /dev/vg_raid1/new_var vg_raid1-new_var_crypt
+   25   01/ 12/ 24 11:19:49 lsblk
+   26   01/ 12/ 24 11:19:49 blkid
+   27   01/ 12/ 24 11:19:49 blkid | grep crypto
+   28   01/ 12/ 24 11:19:49 sudo blkid | grep crypto
+   29   01/ 12/ 24 11:19:49 sudo blkid | grep crypto > /etc/crypttab
+   30   01/ 12/ 24 11:19:49 sudo chmod+wx /etc/crypttab
+   31   01/ 12/ 24 11:19:49 sudo chmod +wx /etc/crypttab
+   32   01/ 12/ 24 11:19:49 sudo blkid | grep crypto > /etc/crypttab
+   33   01/ 12/ 24 11:19:49 ls -l /etc/crypttab
+   34   01/ 12/ 24 11:19:49 sudo su
+   35   01/ 12/ 24 11:19:49 ls
+   36   01/ 12/ 24 11:19:49 who
+   37   01/ 12/ 24 11:19:49 screen -list
+   38   01/ 12/ 24 11:19:49 exit
+   39   01/ 12/ 24 11:19:49 sudo systemctl status mariadb
+   40   01/ 12/ 24 11:19:49 sudo systemctl enable mariadb
+   41   01/ 12/ 24 11:19:49 sudo systemctl start mariadb
+   42   01/ 12/ 24 11:19:49 sudo systemctl status mariadb
+   43   06/ 11/ 24 23:33:05 ip a
+   44   06/ 11/ 24 23:35:36 cat /etc/resolv.conf
+   45   06/ 11/ 24 23:42:03 clear
+   46   06/ 11/ 24 23:42:06 git status
+   47   06/ 11/ 24 23:42:09 clear
+   48   06/ 11/ 24 23:42:10 ls
+   49   06/ 11/ 24 23:42:15 cd cursoGIT
+   50   06/ 11/ 24 23:42:18 git status
+   51   06/ 11/ 24 23:42:22 clear
+   52   06/ 11/ 24 23:42:25 git
+   53   06/ 11/ 24 23:43:12 clear
+   54   06/ 11/ 24 23:43:24 ls
+   55   06/ 11/ 24 23:43:27 cd tp2
+   56   06/ 11/ 24 23:43:30 cd tp1
+   57   06/ 11/ 24 23:43:32 clear
+   58   06/ 11/ 24 23:43:34 git status
+   59   06/ 11/ 24 23:46:09 git commit -m "Agrega el archivo README.md"
+   60   06/ 11/ 24 23:46:51 git status
+   61   06/ 11/ 24 23:51:58 git log
+   62   06/ 11/ 24 23:55:59 sudo nano README.md
+   63   06/ 11/ 24 23:56:30 sudo vi README.md
+   64   07/ 11/ 24 00:03:17 sudo add README.md
+   65   07/ 11/ 24 00:03:25 git add README.md
+   66   07/ 11/ 24 00:03:36 git commit -m "Informe Añadido" README.md
+   67   07/ 11/ 24 00:03:44 git log
+   68   07/ 11/ 24 00:05:13 clear
+   69   07/ 11/ 24 00:05:17 mkdir src
+   70   07/ 11/ 24 00:05:22 cd src
+   71   07/ 11/ 24 00:05:42 touch Criptomoneda.java
+   72   07/ 11/ 24 00:05:46 ls
+   73   07/ 11/ 24 00:05:49 cd ..
+   74   07/ 11/ 24 00:05:50 ls
+   75   07/ 11/ 24 00:05:55 tree
+   76   07/ 11/ 24 00:05:58 clear
+   77   07/ 11/ 24 00:06:04 cd src
+   78   07/ 11/ 24 00:06:34 vi Criptomoneda.java
+   79   07/ 11/ 24 00:10:48 git config --global alias.add-commit 'git add -A && git commit'
+   80   07/ 11/ 24 00:11:12 git add-commit -m “Primera versión del archivo Cyptomonnaie.java”
+   81   07/ 11/ 24 00:11:38 git add
+   82   07/ 11/ 24 00:13:17 git config --global alias.add-commit 'git add -A && git commit -m'
+   83   07/ 11/ 24 00:13:21 git add-commit -m “Primera versión del archivo Cyptomonnaie.java”
+   84   07/ 11/ 24 00:13:48 git add-commit Criptomoneda.java -m “Primera versión del archivo Cyptomonnaie.java”
+   85   07/ 11/ 24 00:14:13 git add Criptomoneda.java
+   86   07/ 11/ 24 00:14:20 git commit -m “Primera versión del archivo Cyptomonnaie.java”
+   87   07/ 11/ 24 00:14:25 git status
+   88   07/ 11/ 24 00:15:01 git commit “Primera versión del archivo Cyptomonnaie.java”
+   89   07/ 11/ 24 00:15:11 git commit -m “Primera versión del archivo Cyptomonnaie.java”
+   90   07/ 11/ 24 00:16:00 ls
+   91   07/ 11/ 24 00:16:58 mv Criptomoneda.java Cryptomoneda.java
+   92   07/ 11/ 24 00:17:04 rm Criptomoneda.java
+   93   07/ 11/ 24 00:17:18 ls
+   94   07/ 11/ 24 00:17:21 clear
+   95   07/ 11/ 24 00:17:36 git add Cryptomoneda.java
+   96   07/ 11/ 24 00:17:52 git commit -m "Primera versión Cryptomoneda.java"
+   97   07/ 11/ 24 00:18:00 git log
+   98   07/ 11/ 24 00:18:37 javac Cryptomoneda.java
+   99   07/ 11/ 24 00:19:23 sudo yum install java
+  100   07/ 11/ 24 00:27:48 sudo yum install java-devel
+  101   07/ 11/ 24 00:29:46 javac Cryptomoneda.java
+  102   07/ 11/ 24 00:30:19 vi Cryptomoneda.java
+  103   07/ 11/ 24 00:30:29 javac Cryptomoneda.java
+  104   07/ 11/ 24 00:30:35 vi Cryptomoneda.java
+  105   07/ 11/ 24 00:30:52 git add Cryptomoneda.java
+  106   07/ 11/ 24 00:31:03 git commit -m
+  107   07/ 11/ 24 00:31:07 git commit
+  108   07/ 11/ 24 00:31:36 git commit -m "Class name changed"
+  109   07/ 11/ 24 00:31:41 javac Cryptomoneda.java
+  110   07/ 11/ 24 00:31:51 vi Cryptomoneda.java
+  111   07/ 11/ 24 00:32:04 git add Cryptomoneda.java
+  112   07/ 11/ 24 00:32:16 git commit -m "Constructor name changed"
+  113   07/ 11/ 24 00:32:19 javac Cryptomoneda.java
+  114   07/ 11/ 24 00:32:24 git status
+  115   07/ 11/ 24 00:32:41 vi .gitignore
+  116   07/ 11/ 24 00:33:10 git status
+  117   07/ 11/ 24 00:33:23 git add .gitignore
+  118   07/ 11/ 24 00:33:40 git commit -m "Añadir .gitignore"
+  119   07/ 11/ 24 00:33:44 git status
+  120   07/ 11/ 24 00:35:10 history > history-P2-L2.txt
+  121   07/ 11/ 24 00:35:24 ls
+  122   07/ 11/ 24 00:35:27 rm history-P2-L2.txt 
+  123   07/ 11/ 24 00:35:31 cd ..
+  124   07/ 11/ 24 00:35:39 history > history-P2-L2.txt
+  125   07/ 11/ 24 00:35:47 git add history-P2-L2.txt 
+  126   07/ 11/ 24 00:35:59 ls
+  127   07/ 11/ 24 00:36:43 git clone https://github.com/LuciaLlavero/bitacoras-ISE-24-25
+  128   07/ 11/ 24 00:36:53 ls
+  129   07/ 11/ 24 00:36:59 cd bitacoras-ISE-24-25/
+  130   07/ 11/ 24 00:37:05 cd ..
+  131   07/ 11/ 24 00:37:07 rm history-P2-L2.txt 
+  132   07/ 11/ 24 00:37:10 cd bitacoras-ISE-24-25/
+  133   07/ 11/ 24 00:37:19 history > history-P2-L2.txt
+  134   07/ 11/ 24 00:37:24 git add history-P2-L2.txt 
+  135   07/ 11/ 24 00:37:36 git commit
+  136   07/ 11/ 24 00:38:36 git commit -m "history-P2-L2"
+  137   07/ 11/ 24 00:38:44 git push
+  138   07/ 11/ 24 00:47:26 clear
+  139   07/ 11/ 24 01:37:00 git clone https://github.com/LuciaLlavero/bitacoras-ISE-24-25
+  140   07/ 11/ 24 02:10:53 ls
+  141   07/ 11/ 24 02:10:57 cat history-P2-L2.txt 
+  142   07/ 11/ 24 02:11:02 ls
+  143   07/ 11/ 24 02:11:05 cd bitacoras-ISE-24-25/
+  144   07/ 11/ 24 02:11:06 ls
+  145   07/ 11/ 24 02:11:21 cd ..
+  146   07/ 11/ 24 02:11:23 ls
+  147   07/ 11/ 24 02:11:39 mv history-P2-L2.txt ./bitacoras-ISE-24-25/
+  148   07/ 11/ 24 02:11:43 cd bitacoras-ISE-24-25/
+  149   07/ 11/ 24 02:11:53 git add history-P2-L2.txt 
+  150   07/ 11/ 24 02:12:03 git commit -m "history-P2-L2"
+  151   07/ 11/ 24 02:13:20 git push
+  152   07/ 11/ 24 17:18:32 clear
+  153   01/ 12/ 24 11:20:39 ssh-copy-id -i ~/.ssh/id_rsa.pub lucialc@192.168.1.10 -p 22022
+  154   01/ 12/ 24 11:22:26 ssh-copy-id -i ~/.ssh/id_rsa.pub -o "Port=22022" lucialc@192.168.56.105
+  155   01/ 12/ 24 11:23:43 ansible ubuntuServer -m ping
+  156   01/ 12/ 24 11:27:08 sudo vi ./monitorRaid1Ubuntu.sh 
+  157   01/ 12/ 24 11:30:25 ansible ubuntuServer -m shell -a "bash /home/lucialc/monitorRaid1Ubuntu.sh"
+  158   01/ 12/ 24 11:30:39 ansible ubuntuServer -m shell -a "bash ./monitorRaid1Ubuntu.sh"
+  159   01/ 12/ 24 11:31:59 ansible -i ubuntuServer -m shell -a "bash ./monitorRaid1Ubuntu.sh"
+  160   01/ 12/ 24 11:32:31 ansible ubuntuServer -m shell -a "bash ./monitorRaid1Ubuntu.sh"
+  161   01/ 12/ 24 11:33:32 clear
+  162   01/ 12/ 24 11:34:26 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  163   01/ 12/ 24 11:35:20 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  164   01/ 12/ 24 11:35:39 sudo vi ./monitorRaid1Ubuntu.sh 
+  165   01/ 12/ 24 11:36:03 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  166   01/ 12/ 24 11:36:16 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  167   01/ 12/ 24 11:37:55 sudo vi ./monitorRaid1Ubuntu.sh 
+  168   01/ 12/ 24 11:38:36 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  169   01/ 12/ 24 11:38:43 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  170   01/ 12/ 24 11:39:14 sudo vi ./monitorRaid1Ubuntu.sh 
+  171   01/ 12/ 24 11:39:24 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  172   01/ 12/ 24 11:39:29 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  173   01/ 12/ 24 11:40:17 sudo vi ./monitorRaid1Ubuntu.sh 
+  174   01/ 12/ 24 11:40:29 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  175   01/ 12/ 24 11:40:33 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  176   01/ 12/ 24 11:40:54 sudo vi ./monitorRaid1Ubuntu.sh 
+  177   01/ 12/ 24 11:41:08 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  178   01/ 12/ 24 11:41:12 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  179   01/ 12/ 24 11:43:56 clear
+  180   01/ 12/ 24 11:43:58 sudo vi ./monitorRaid1Ubuntu.sh 
+  181   01/ 12/ 24 11:44:16 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  182   01/ 12/ 24 11:44:24 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  183   01/ 12/ 24 11:47:04 sudo vi ./monitorRaid1Ubuntu.sh 
+  184   01/ 12/ 24 11:48:14 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  185   01/ 12/ 24 11:48:19 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  186   01/ 12/ 24 11:48:59 sudo vi ./monitorRaid1Ubuntu.sh 
+  187   01/ 12/ 24 11:49:18 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  188   01/ 12/ 24 11:49:22 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  189   01/ 12/ 24 11:58:28 clear
+  190   01/ 12/ 24 11:58:55 sudo vi monitorRaidUbuntu.yaml
+  191   01/ 12/ 24 11:59:40 ansible-playbook --become monitorRaidUbuntu.yaml
+  192   01/ 12/ 24 12:06:57 sudo vi /etc/ansible/hosts
+  193   01/ 12/ 24 12:07:20 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  194   01/ 12/ 24 12:09:59 sudo vi /etc/ansible/hosts
+  195   01/ 12/ 24 12:10:14 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  196   01/ 12/ 24 12:11:42 sudo vi /etc/ansible/hosts
+  197   01/ 12/ 24 12:12:00 ansible ubuntuServer -m shell -a "bash /tmp/monitorRaid1Ubuntu.sh"
+  198   01/ 12/ 24 12:13:26 ansible-playbook --become monitorRaidUbuntu.yaml
+  199   01/ 12/ 24 13:42:21 clear
+  200   01/ 12/ 24 13:42:31 sudo vi /etc/ansible/hosts
+  201   01/ 12/ 24 13:43:23 cat ./monitorRaid1Ubuntu.sh
+  202   01/ 12/ 24 13:43:50 clear
+  203   01/ 12/ 24 13:44:03 ansible ubuntuServer -m copy -a "src=./monitorRaid1Ubuntu.sh dest=/tmp/monitorRaid1Ubuntu.sh mode=0755"
+  204   01/ 12/ 24 13:44:22 ansible-playbook --become monitorRaidUbuntu.yaml
+  205*  01/ 12/ 24 13:53:53 
+  206   01/ 12/ 24 13:56:44 sudo vi monitorWebServer.yaml
+  207   01/ 12/ 24 13:58:38 ansible-playbook --become monitorWebServers.yaml
+  208   01/ 12/ 24 13:58:51 ansible-playbook --become monitorWebServer.yaml 
+  209   01/ 12/ 24 13:59:24 sudo vi monitorWebServer.yaml
+  210   01/ 12/ 24 13:59:35 ansible-playbook --become monitorWebServer.yaml 
+  211   01/ 12/ 24 13:59:41 sudo vi monitorWebServer.yaml
+  212   01/ 12/ 24 14:01:13 sudo vi /etc/ansible/hosts
+  213   01/ 12/ 24 14:01:56 sudo vi monitorWebServer.yaml
+  214   01/ 12/ 24 14:02:03 ansible-playbook --become monitorWebServer.yaml 
+  215   01/ 12/ 24 14:02:10 sudo vi monitorWebServer.yaml
+  216   01/ 12/ 24 14:05:09 ansible-playbook --become monitorWebServer.yaml 
+  217   01/ 12/ 24 14:07:04 sudo vi /etc/ansible/hosts
+  218   01/ 12/ 24 14:07:45 sudo systemctl status httpd
+  219   01/ 12/ 24 14:08:00 sudo systemctl start httpd
+  220   01/ 12/ 24 14:08:11 sudo systemctl enable httpd
+  221   01/ 12/ 24 14:08:14 clear
+  222   01/ 12/ 24 14:08:18 ansible-playbook --become monitorWebServer.yaml 
+  223   01/ 12/ 24 14:10:39 sudo vi /etc/ansible/hosts
+  224   01/ 12/ 24 14:11:12 sudo vi monitorWebServer.yaml
+  225   01/ 12/ 24 14:12:02 sudo vi /etc/ansible/hosts
+  226   01/ 12/ 24 14:12:44 ansible-playbook --become monitorWebServer.yaml 
+  227   01/ 12/ 24 14:13:14 sudo vi /etc/ansible/hosts
+  228   01/ 12/ 24 14:13:29 clear
+  229   01/ 12/ 24 14:13:31 ansible-playbook --become monitorWebServer.yaml 
+  230   01/ 12/ 24 14:13:50 sudo vi /etc/ansible/hosts
+  231   01/ 12/ 24 14:14:06 clear
+  232   01/ 12/ 24 14:14:09 ansible-playbook --become monitorWebServer.yaml 
+  233   01/ 12/ 24 14:20:56 cat monitorRaid1Ubuntu.sh
+  234   01/ 12/ 24 15:18:17 clear
+  235   01/ 12/ 24 15:18:42 strace -fvttTyy -s 256 -e trace=call ssh
+  236   01/ 12/ 24 15:19:00 sudo dnf install strace
+  237   01/ 12/ 24 15:21:09 ps -aux
+  238   01/ 12/ 24 15:21:30 strace -fvttTyy -s 256 -e trace=call -15455
+  239   01/ 12/ 24 15:22:10 strace -fvttTyy -s 256 -15455
+  240   01/ 12/ 24 15:23:00 man strace
+  241   01/ 12/ 24 15:23:20 strace -fvttTyy -s 256 -p15455
+  242   01/ 12/ 24 15:23:26 sudo strace -fvttTyy -s 256 -p15455
+  243   01/ 12/ 24 15:23:48 man strace
+  244   01/ 12/ 24 15:24:25 sudo strace -p15455
+  245   01/ 12/ 24 15:53:40 cd bitacoras-ISE-24-25/
+  246   01/ 12/ 24 15:54:09 git add history-P3-AnsibleMonitoring.txt
+  247   01/ 12/ 24 15:54:27 git commit -m "Ansible Monitoring YAML Script"
+  248   01/ 12/ 24 15:54:58 git push
+  249   01/ 12/ 24 15:55:16 git add history-P3-AnsibleMonitoring.txt
+  250   01/ 12/ 24 15:56:03 history > history-P3-AnsibleMonitoring.txt
